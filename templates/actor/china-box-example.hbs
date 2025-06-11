@@ -1,0 +1,23 @@
+
+<!-- 角色卡中国风分区示例 -->
+<section class="sheet-body">
+  <div class="china-box">
+    <h3>基础状态</h3>
+    <ul>
+      <li>气血：{{data.attributes.hp.value}} / {{data.attributes.hp.max}}</li>
+      <li>真气：{{data.attributes.qi.value}} / {{data.attributes.qi.max}}</li>
+      <li>护体：{{data.attributes.armor}}</li>
+    </ul>
+  </div>
+
+  <div class="china-box">
+    <h3>内功架构</h3>
+    <p>当前内功路线：{{data.internal.current}}</p>
+    <p>当前功法：{{data.internal.style}}</p>
+  </div>
+
+  <div class="china-box">
+    <h3>备注</h3>
+    <textarea>{{data.notes}}</textarea>
+  </div>
+</section>
