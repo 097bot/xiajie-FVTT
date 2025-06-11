@@ -1,0 +1,527 @@
+{
+    "CSB": {
+        "Attributes": {
+            "AttributeBarsDialog": {
+                "Title": "角色属性栏"
+            },
+            "EditAttributeBarsDialog": {
+                "MissingData": "每个属性栏必须输入名称、值和最大值",
+                "Title": "编辑属性栏"
+            },
+            "EditHiddenAttributesDialog": {
+                "MissingData": "每个属性必须输入名称和公式",
+                "Title": "编辑属性"
+            },
+            "Formula": "公式",
+            "HiddenAttributesDialog": {
+                "Title": "角色隐藏属性"
+            },
+            "Maximum": "最大值",
+            "Name": "名称",
+            "Value": "值"
+        },
+        "ChatCommands": {
+            "SheetRollCommand": "从角色表进行一次掷骰子",
+            "SheetAltRollCommand": "从角色表进行一次替代性掷骰子",
+            "ActorNotFound": "没有合适的角色来为此次掷骰子"
+        },
+        "ComponentProperties": {
+            "ActiveEffectContainer": {
+                "DeleteActiveEffectDialog": {
+                    "Content": "你确定要删除这个主动效果吗？",
+                    "Title": "删除主动效果"
+                },
+                "HideEmpty": "隐藏空白",
+                "ActiveEffectRefColAlign": "主动效果参考列对齐",
+                "ActiveEffectRefColLabel": "主动效果参考列标签",
+                "ShowConfirmationDialogOnActiveEffectDelete": "在删除主动效果时显示确认对话框",
+                "ShowActiveEffectDeleteButton": "显示删除主动效果按钮",
+                "TableTitle": "表标题",
+                "ActiveEffectRefColLabelDefault": "名称",
+                "ShowCreateButton": "显示创建按钮"
+            },
+            "AdditionalCssClasses": "额外的CSS类",
+            "AdvancedConfiguration": "高级配置",
+            "Alignment": {
+                "AlignCenter": "居中",
+                "AlignJustify": "对齐",
+                "AlignLeft": "左对齐",
+                "AlignRight": "右对齐"
+            },
+            "AllowFormula": "允许公式",
+            "AllowFormulaCreateTimeOnly": "仅在创建时有意义（不会自动更新）",
+            "CheckedByDefault": "默认勾选",
+            "ComponentDialog": {
+                "Delete": {
+                    "Content": "你确定要删除这个组件吗？",
+                    "Title": "删除组件"
+                },
+                "Edit": {
+                    "Title": "编辑组件"
+                }
+            },
+            "ComponentKey": "组件键",
+            "ComponentKeyWarning": "你的键在公式计算系统中是一个保留字。使用这个键在公式中可能会导致意外结果，请注意。",
+            "ComponentType": {
+                "ActiveEffectContainer": "主动效果显示器",
+                "Checkbox": "复选框",
+                "ConditionalModifierList": "条件修改器选择器",
+                "Dropdown": "下拉框",
+                "DynamicTable": "动态表格",
+                "ItemContainer": "物品显示器",
+                "Label": "标签",
+                "Meter": "计量器",
+                "NumberField": "数字字段",
+                "Panel": "面板",
+                "RadioButton": "radio按钮",
+                "RichTextArea": "富文本区域",
+                "SectionTitle": "组件类型",
+                "Tab": "标签",
+                "TabbedPanel": "标签面板",
+                "Table": "表格",
+                "TextField": "文本字段"
+            },
+            "ConditionalModifierList": {
+                "DisplayInfoIcon": "显示信息图标",
+                "FilterModifierGroup": "过滤修改组",
+                "GroupColumnAlign": "组列对齐",
+                "GroupColumnName": "组列名称",
+                "GroupFilterFormula": "高级-组过滤公式",
+                "GroupFilterFormulaTitle": "公式应返回分隔逗号的组名称（,）。如果设置，将覆盖选择框选择。",
+                "SelectGroup": "选择组（留空表示选择所有）",
+                "SelectionColumnAlign": "选择列对齐",
+                "SelectionColumnName": "选择列名称",
+                "SelectionColumnNameDefault": "已选",
+                "GroupColumnNameDefault": "组"
+            },
+            "DefaultValue": "默认值",
+            "Dropdown": {
+                "OptionsOrigin": {
+                    "Custom": "自定义",
+                    "DefaultValueTitle": "在创建时会作为选中的键。如果没有，会自动添加一个空选项到下拉字段中",
+                    "DynamicTable": "动态表格",
+                    "DynamicTableKey": "动态表格键",
+                    "DynamicTableOptionKey": "从动态表格中使用的选项键",
+                    "DynamicTableOptionLabel": "从动态表格中使用的选项标签",
+                    "ExpectedValueType": "预期值类型：数组/矩阵（或以逗号分隔的字符串）",
+                    "Formula": "公式",
+                    "FormulaForKeyOption": "用于选项键的公式",
+                    "FormulaForLabelOption": "用于选项标签的公式",
+                    "IfNotSet": "如果不设置，将使用选项键代替",
+                    "Key": "键",
+                    "Label": "标签",
+                    "Options": "选项",
+                    "SectionTitle": "下拉框选项来源"
+                }
+            },
+            "DynamicTable": {
+                "CanAddRow": "玩家可以在表格中添加行吗？",
+                "ConfirmDialogOnDelete": "在删除行时显示确认对话框",
+                "DeleteRowDialog": {
+                    "Content": "你确定要删除这个行吗？",
+                    "Title": "删除行"
+                }
+            },
+            "Errors": {
+                "AlphanumericPatternError": "\"{PROPERTY_NAME}\"必须是一个由大写和小写字母以及下划线组成的字符串",
+                "DropdownOptionValidationError": "下拉框中的每个选项都必须有一个键",
+                "DynamicTableAutoFilterValidationError": "你必须在保存之前为 {KEY} 进行输入",
+                "NotGreaterThanZeroError": "\"{PROPERTY_NAME}\"必须大于0",
+                "NotUniqueError": "\"{PROPERTY_NAME}\"必须是唯一的",
+                "RequiredFieldError": "\"{PROPERTY_NAME}\"必须提供"
+            },
+            "ExtensibleTable": {
+                "Alignment": "对齐",
+                "ColumnName": "列名",
+                "ColumnNameBold": "使列名加粗",
+                "ColumnSort": {
+                    "SortLeft": "将组件移动到左边",
+                    "SortRight": "将组件移动到右边"
+                },
+                "DisplayColumnName": "显示列名",
+                "Sort": {
+                    "AddSortingCriteria": "添加排序标准",
+                    "Auto": "自动",
+                    "ColumnKey": "列键",
+                    "Disabled": "禁用",
+                    "Manual": "手动",
+                    "Operator": "运算符",
+                    "SortOptions": "排序选项",
+                    "Title": "排序条目",
+                    "Value": "值"
+                },
+                "SortOperator": {
+                    "Ascending": "升序",
+                    "Descending": "降序",
+                    "Equals": "==",
+                    "NotEquals": "!="
+                }
+            },
+            "InputComponent": {
+                "Label": "标签"
+            },
+            "ItemContainer": {
+                "DeleteItemDialog": {
+                    "Content": "你确定要删除这个物品吗？",
+                    "Title": "删除物品"
+                },
+                "FilterItem": "过滤物品",
+                "FilterItemDesc": "物品过滤公式",
+                "HideEmpty": "隐藏空白",
+                "ItemRefColAlign": "物品参考列对齐",
+                "ItemRefColLabel": "物品参考列标签",
+                "SelectTemplate": "选择模板",
+                "ShowConfirmationDialogOnItemDelete": "在删除物品时显示确认对话框",
+                "ShowItemDeleteButton": "显示删除物品按钮",
+                "ShowItemStatus": "(GM-only)显示物品状态",
+                "TableTitle": "表标题",
+                "ItemRefColLabelDefault": "名称"
+            },
+            "Label": {
+                "Actions": {
+                    "AddAltAsMacro": "将替代内容添加为宏",
+                    "AddAsMacro": "添加为宏",
+                    "CopyAltChatCommand": "复制替代聊天指令",
+                    "CopyAltMacroScript": "复制替代宏脚本",
+                    "CopyChatCommand": "复制聊天指令",
+                    "CopyChatCommandFailure": "请复制指令到下方文本框中。你可以然后将其粘贴到聊天中或用于聊天宏。",
+                    "CopyChatCommandSuccess": "聊天指令已复制到剪贴板！你现在可以将其粘贴到聊天中或用于聊天宏！",
+                    "CopyMacroScript": "复制宏脚本",
+                    "CopyMacroScriptFailure": "请复制脚本到下方文本框中。你可以然后将其用于脚本宏。",
+                    "CopyMacroScriptSuccess": "宏脚本已复制到剪贴板！你现在可以将其用于脚本宏！"
+                },
+                "AddMacroDialog": {
+                    "MacroName": "宏名称：",
+                    "MacroNameError": "请输入名称",
+                    "MacroPageError": "请输入页码，范围是1到5",
+                    "MacroSlot": "宏插槽：",
+                    "MacroSlotError": "请输入插槽编号，范围是0到9",
+                    "MacroSlotNumber": "插槽：",
+                    "MacroSlotPage": "页：",
+                    "Title": "添加宏"
+                },
+                "AltRollMessage": "替代掷骰子消息",
+                "AltRollMessageDescription": "在Shift + 点击时触发",
+                "FontAwesomeIconDescription": "你可以使用Font-Awesome图标名称，比如'dice-d20'。查看他们的网站以了解他们的图标集合",
+                "Icon": "标签图标",
+                "LabelStyle": {
+                    "Boldtext": "粗体文本",
+                    "Button": "按钮",
+                    "Default": "默认",
+                    "SectionTitle": "标签样式",
+                    "Subtitle": "副标题",
+                    "Title": "标题"
+                },
+                "LabelText": "标签文本",
+                "Prefix": "标签前缀",
+                "RollMessage": "标签掷骰子消息",
+                "SendAltRollMessageToChat": "将替代掷骰子消息发送到聊天中",
+                "SendRollMessageToChat": "将掷骰子消息发送到聊天中",
+                "Suffix": "标签后缀",
+                "UseRichTextEditorForAltRollMessage": "为替代掷骰子消息使用富文本编辑器",
+                "UseRichTextEditorForLabel": "为标签使用富文本编辑器",
+                "UseRichTextEditorForRollMessage": "为掷骰子消息使用富文本编辑器"
+            },
+            "Meter": {
+                "HighValue": "高值",
+                "LowValue": "低值",
+                "Maximum": "最大值",
+                "Minimum": "最小值",
+                "OptimumValue": "最佳值",
+                "TextDisplay": {
+                    "None": "无",
+                    "SectionTitle": "文本显示：",
+                    "Value": "显示值",
+                    "ValueAndMaximum": "显示值和最大值",
+                    "ValueAsPercentage": "显示值作为百分比"
+                },
+                "Value": "值"
+            },
+            "MinimumPermission": "最低权限查看组件",
+            "MinimumRole": "最低角色查看组件",
+            "NumberField": {
+                "AllowDecimal": "允许小数",
+                "AllowRelativeModification": "允许相对修改",
+                "AllowRelativeModificationDescription": "输入'+5'将增加当前值，例如",
+                "ControlStyle": {
+                    "FullControl": "全控制",
+                    "Hover": "悬停显示",
+                    "SectionTitle": "控制样式"
+                },
+                "DisplayStyle": {
+                    "DisplayAsSlider": "显示为滑块",
+                    "DisplayAsTextField": "显示为文本字段",
+                    "SectionTitle": "数字字段显示"
+                },
+                "MaxValue": "最大值",
+                "MinValue": "最小值",
+                "ShowFieldControls": "显示字段控制",
+                "ShowFieldControlsDescription": "在两侧显示 '+' 和 '-' 按钮"
+            },
+            "Panel": {
+                "Collapsible": {
+                    "No": "否",
+                    "SectionTitle": "面板是否可折叠？",
+                    "SectionTitleDefault": "面板是否默认折叠？",
+                    "Yes": "是"
+                },
+                "PanelAlign": {
+                    "SectionTitle": "面板对齐"
+                },
+                "PanelLayout": {
+                    "GridOf10": "10列网格",
+                    "GridOf11": "11列网格",
+                    "GridOf12": "12列网格",
+                    "GridOf2": "2列网格",
+                    "GridOf3": "3列网格",
+                    "GridOf4": "4列网格",
+                    "GridOf5": "5列网格",
+                    "GridOf6": "6列网格",
+                    "GridOf7": "7列网格",
+                    "GridOf8": "8列网格",
+                    "GridOf9": "9列网格",
+                    "Horizontal": "水平",
+                    "SectionTitle": "面板布局",
+                    "Vertical": "垂直"
+                },
+                "PanelTitle": "面板标题",
+                "PanelTitleStyle": "面板标题样式"
+            },
+            "RadioButton": {
+                "Group": "组",
+                "GroupDescription": "将用于公式中的键",
+                "Value": "值"
+            },
+            "Size": {
+                "Auto": "自动",
+                "Gigantic": "巨大",
+                "Large": "大",
+                "Larger": "更大",
+                "Medium": "中等",
+                "SectionTitle": "大小",
+                "Small": "小",
+                "Smaller": "更小",
+                "Tiny": "很小"
+            },
+            "Tab": {
+                "Dialog": {
+                    "MissingData": "键和名称不能为空",
+                    "TitleCreate": "新标签",
+                    "TitleEdit": "编辑标签 {TAB_KEY}"
+                },
+                "EnterNameAndKey": "请输入标签名称和键。",
+                "MinimumPermission": "最低权限查看标签",
+                "MinimumRole": "最低角色查看标签",
+                "NameAndKeyDescription": "名称可以是任何内容，键必须是小写字母和数字，并且在标签中唯一。",
+                "TabKey": "标签键",
+                "TabName": "标签名称",
+                "TabTooltip": "标签的工具提示（在悬停标签名称时显示）",
+                "VisibiltyFormulaDescription": "公式不带${}$。如果设置，标签将根据公式可见。"
+            },
+            "TabbedPanel": {
+                "AddTab": "添加新标签",
+                "DeleteTab": "删除当前标签",
+                "EditTab": "编辑当前标签",
+                "SortTabToLeft": "将标签移到左边",
+                "SortTabToRight": "将标签移到右边"
+            },
+            "Table": {
+                "ColCount": "列数",
+                "RowCount": "行数",
+                "TableLayout": "表格布局",
+                "TableLayoutDescription": "您可以为每一列指定是左对齐（l）、右对齐（r）还是居中对齐（c）。4列表的示例：“cllr”"
+            },
+            "TextArea": {
+                "Dialog": {
+                    "Title": "文本编辑器"
+                },
+                "Style": {
+                    "DialogEditor": "对话框编辑器",
+                    "IconOnly": "仅图标",
+                    "InSheetEditor": "在表格编辑器中",
+                    "SectionTitle": "样式"
+                }
+            },
+            "TextField": {
+                "AllowedCharacterList": "允许的字符列表",
+                "AutoComplete": "自动完成公式",
+                "AutoCompleteDescription": "该字段应包含自动完成值，用逗号分隔。可以包含公式。",
+                "MaxLength": "最大长度"
+            },
+            "Tooltip": "组件的工具提示",
+            "VisibiltyFormula": "可见公式",
+            "VisibiltyFormulaDescription": "如果公式计算结果为真，组件将可见。",
+            "WithoutDelimiters": "没有公式分隔符${}$"
+        },
+        "Display": {
+            "DefaultHeight": "表默认高度",
+            "DefaultWidth": "表默认宽度",
+            "EditDialog": {
+                "DefaultValues": "默认值",
+                "": "编辑显示设置"
+            },
+            "PreventSheetResizing": "防止表格大小更改",
+            "ProfilPictureHeight": "头像高度",
+            "ProfilPictureWidth": "头像宽度"
+        },
+        "Export": {
+            "ExportButton": "导出模板JSON",
+            "ImportButton": "导入模板JSON",
+            "ExportDialog": {
+                "Title": "选择模板",
+                "Subtitle": "选择要导出的模板：",
+                "Action": "导出"
+            },
+            "ImportDialog": {
+                "Title": "导入完成",
+                "Content": "导入完成。窗口将重新加载。"
+            }
+        },
+        "Formula": {
+            "Default": "默认",
+            "ERROR": "错误",
+            "Is": "是",
+            "NewValue": "新值",
+            "Operator": "运算符",
+            "PREFIXERROR": "前缀错误",
+            "Property": "属性",
+            "ReplaceWith": "替换为",
+            "Search": "搜索",
+            "SUFFIXERROR": "后缀错误",
+            "Target": "目标",
+            "Where": "在哪里"
+        },
+        "Items": {
+            "EmbeddedItemsFolderDescription": "这个文件夹包含游戏级物品中的嵌入物品（不嵌入在角色中)"
+        },
+        "Modifier": {
+            "Description": "描述",
+            "EditDialog": {
+                "MissingData": "键和公式必须输入每个修改器",
+                "ModifierCount": "{COUNT} 个修改器",
+                "Title": "配置修改器"
+            },
+            "Formula": "值公式",
+            "Group": "组",
+            "ItemModifiers": "物品修改器",
+            "Key": "键",
+            "Operator": "运算符",
+            "Priority": "优先级",
+            "TemplateModifiers": "模板修改器"
+        },
+        "Settings": {
+            "InitiativeFormula": {
+                "Name": "主动计数公式",
+                "Hint": "输入不带 '${}$' 的公式"
+            },
+            "CustomStyle": {
+                "Name": "CSS样式文件",
+                "Hint": "你可以指定一个自定义样式文件。如果想使用默认样式，留空。WARNING : Foundry不允许上传CSS文件。请手动上传到服务器后再在这里选择。"
+            },
+            "ExpandRollVisibility": {
+                "Name": "扩展掷骰子可见性到整个聊天消息",
+                "Hint": "如果选中，掷骰子隐私将影响来自表格的消息。这使用了whispers。"
+            },
+            "RollIcons": {
+                "Name": "掷骰子图标",
+                "Hint": "你可以指定一个fontawesome图标名称，添加到Clickable标签旁边的图标。例如：dice-d20显示一个d20图标。如果空白，不显示图标。"
+            },
+            "ShowHiddenRolls": {
+                "Name": "显示隐藏掷骰子",
+                "Hint": "这个设置会将隐藏的掷骰子显示给GM用于验证目的。"
+            },
+            "DelayEntitySaving": {
+                "Name": "延迟实体保存",
+                "Hint": "在大表格上，你可能希望延迟实体保存，以防止表格重新加载过于耗时。这会在字段 deselected 之后一次性保存所有内容。"
+            },
+            "LoggingLevel": {
+                "Name": "系统日志级别",
+                "Hint": "将日志级别设置为以下级别及以上将被记录。对于大型系统，设置为debug可能会减慢界面。",
+                "Levels": {
+                    "None": "无日志",
+                    "Error": "仅记录错误",
+                    "Warn": "记录警告及以上",
+                    "Info": "记录信息及以上",
+                    "Log": "记录所有（除debug外）",
+                    "Debug": "记录所有"
+                }
+            },
+            "MinimumRoleEditModifiers": {
+                "Name": "最低角色编辑物品修改器",
+                "Hint": "查看和编辑物品修改器所需的最低角色。"
+            },
+            "MinimumRoleTemplateReload": {
+                "Name": "最低角色重新加载表格",
+                "Hint": "重新加载表格所需的最低角色。"
+            }
+        },
+        "Sheets": {
+            "ConfigureItemModifier": "配置物品修改器",
+            "InvalidSheet": "无效表格",
+            "MakeItemUnique": "使物品唯一",
+            "OpenTemplateSheet": "打开模板表格",
+            "ReloadTemplate": "重新加载模板",
+            "SeeAttributeBars": "查看属性栏",
+            "SeeHiddenAttributes": "查看隐藏属性",
+            "Template": "模板"
+        },
+        "TemplateActions": {
+            "AddNewElement": "添加新元素",
+            "ConfigureActiveEffects": "配置主动效果",
+            "ConfigureAttributeBars": "配置属性栏",
+            "ConfigureHiddenAttributes": "配置隐藏属性",
+            "ConfigureSheetDisplay": "配置表格显示",
+            "Redo": "重做",
+            "ReloadCharacterSheets": "重新加载所有角色表格",
+            "ReloadItemSheet": "重新加载所有物品表格",
+            "ReloadSheetsDialog": {
+                "Contents": "你真的想重新加载所有与此模板相关联的表格吗？",
+                "Title": "重新加载所有链接的表格？"
+            },
+            "Undo": "撤销"
+        },
+        "UserInput": {
+            "Value": "值",
+            "Variable": "变量"
+        },
+        "UserMessages": {
+            "Dropdown": {
+                "OptionsLengthError": "{COMPONENT_KEY}：键和标签选项的长度必须相同。"
+            },
+            "CannotMoveItemInItself": "无法将物品移动到自身内部",
+            "EmbeddedItemsFolderNotFound": "嵌入物品文件夹未找到。请创建一个名为{EMBEDDED_ITEMS_FOLDER_NAME}的物品文件夹。",
+            "ItemMaxDepth": "物品不能嵌套超过{depth}级深度。",
+            "ItemTemplateDeleted": "物品模板已被删除用于物品{ITEM_NAME} - {ITEM_UUID}，用于实体{ENTITY_NAME} - {ENTITY_UUID}",
+            "Label": {
+                "ChatCommandeCreationError": "无法创建聊天指令。"
+            },
+            "NumberField": {
+                "ValueNotInteger": "值必须是整数",
+                "ValueNotNumeric": "值必须是数字",
+                "ValueNotTooHigh": "值必须小于{VALUE}",
+                "ValueNotTooLow": "值必须大于{VALUE}"
+            },
+            "TabbedPanel": {
+                "DuplicateTabKeEdit": "无法编辑具有重复键的标签：{KEY}",
+                "DuplicateTabKey": "无法创建具有重复键的标签：{KEY}"
+            },
+            "TextField": {
+                "WrongValue": "值包含未授权的字符"
+            },
+            "UserInputTemplateNotFound": "用户输入模板{TEMPLATE_NAME}未找到。",
+            "WrongDragOnTemplate": "仅可以从模板的子模板中拖动到模板上。"
+        }
+    },
+    "TYPES": {
+        "Actor": {
+            "_template": "模板",
+            "character": "角色"
+        },
+        "Item": {
+            "_equippableItemTemplate": "可配戴物品模板",
+            "equippableItem": "可配戴物品",
+            "subTemplate": "子模板",
+            "userInputTemplate": "用户输入模板"
+        }
+    }
+}
