@@ -1,0 +1,740 @@
+/* Browsers without `::-webkit-scrollbar-*` support */
+@supports selector(::-webkit-scrollbar) {
+    html {
+        scrollbar-width: unset !important;
+        scrollbar-color: unset !important;
+    }
+}
+
+/*=======字体 完工========*/
+@font-face {
+  font-family: 'mingchao';
+  src: url('../../font/mingchao.otf') format('opentype');
+}
+body,
+.window-content,
+.sheet {
+  font-family: 'mingchao', serif;
+  font-size: 18px;
+  line-height: 1.6; /* 可选，让字体更舒展 */
+  font-weight: normal;
+}
+/*====背景 完工====*/
+body {
+    background-image: url(../../assets/ui/bg.jpg);
+    background-size: cover;
+}
+/*=====暂停键背景 可旋转 完工======*/
+#pause img[src*="icons/svg/clockwork.svg"]{
+	box-sizing: border-box;
+	width: 128px;
+	height: 128px;
+	padding-left: 128px;
+	
+	background-image: url(../../assets/other/taiji.png);
+	animation: rotation 20s infinite linear;	
+    transform-origin: center center; /* 旋转中心为图片中心 */
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  /*============系统颜色更改 未完工 未确认作用=============*/
+  --color-text-dark-primary: #3c2f2f;        /* 墨褐 - 主体深色文字 */
+  --color-text-dark-inactive: #908378;       /* 褐灰 - 不活跃文本 */
+  --color-text-dark-5: #009523;              /* 雀梅灰 - 次级文字  未找到*/
+  --color-text-light-1: #dcc8c8;             /* 宣纸白 - 浅色文字 游戏暂停与玩家设置*/
+  --color-text-light-6: #504d40;             /* 米黄浅灰 - 辅助说明文字 在战斗面板设置的位置显示*/
+  --color-text-hyperlink: #b03a2e;           /* 朱砂红 - 超链接、强调 */
+  --color-border-light-1: #0364ff;        /* 宣纸米灰 - 浅色边框  未找到*/
+  --color-border-dark-5: #5c5248;         /* 墨棕色 - 深色边框 */
+  --color-border-light-tertiary: #a59688; /* 檀灰 - 第三层浅边 */
+  --color-border-light-2: #b9aea0;        /* 月白灰 - 次浅边框 */
+  --color-shadow-primary: #944537;        /* 绛红 - 主阴影/强调 */
+  --form-field-height: 28px;              /* 搜索框高度 */
+  --xiajie-sheet-background: url("../../assets/ui/beijing.webp") repeat; /*背景图片*/
+   --xiajie-sheet-biankuang-1: url("../../assets/ui/touxiangbiankuang.png");/*头像边框*/
+  --xiajie-color-black: #1a1a1a;         /* 更柔和的黑 */
+  --xiajie-color-dark: #3a2c1d;          /* 深棕主色 */
+  --xiajie-color-faint: #cabfae;         /* 温和米色 */
+  --xiajie-color-beige: #d8cfc4;         /* 更明亮米色 */
+  --xiajie-color-tan: #a68c7c;           /* 棕褐中调 */
+  --xiajie-color-olive: #6b5e4a;         /* 棕绿过渡色 */
+  --xiajie-color-crimson: #a6352d;       /* 深红棕，强烈装饰 */
+  --xiajie-color-groove: #f0ebe3;        /* 仿宣纸背景线框 */
+  --xiajie-color-gold: #b88a4a;          /* 仿金边装饰色 */
+  --xiajie-color-red: #a32828;           /* 中国红替代 */
+  --xiajie-color-blue: #4a7ca5;          /* 青蓝色 */
+  --xiajie-color-green: #4f6f4e;         /* 低饱和绿色 */
+  --xiajie-color-maroon: #5a1c22;        /* 深枣红 */
+  --xiajie-color-parchment: #f9f6f1;     /* 宣纸色 */
+  --xiajie-color-purple: #8c5ea2;        /* 国风紫 */
+  --xiajie-border-width-standard: 2px;   /* 基本装饰线 */
+  --xiajie-border-width-thick: 3px;      /* 强调边框，可略细于欧美风格 */
+  --xiajie-border-radius-none: 0;
+  --xiajie-border-radius-soft: 4px;      /* 较小的圆角更符合简约古典风 */
+  --border-color:#372d25;        /*玩家设置中字体颜色*/
+  --color-success: #3c7f58;      /* 成功状态绿色 */
+  --color-warning: #b56a00;      /* 警告状态橙色 */
+  --color-error: #801515;        /* 错误状态红棕 */
+  --color-info: #52738a;         /* 信息提示蓝灰 */
+  --xiajie-color-application-damage: #a65c47;   /* 伤害颜色 - 赤棕 */
+  --xiajie-color-application-healing: #4d7f6e;  /* 治疗颜色 - 墨绿灰 */
+  --xiajie-color-application-temp: #558f91;     /* 临时效果 - 青黛蓝 */
+  /*======================= 背景 & 边框变量 =======================*/
+  --xiajie-background-25: rgba(0, 0, 0, 0.25);       /* 暗色遮罩 25% */
+  --xiajie-background-10: rgba(0, 0, 0, 0.1);        /* 暗色遮罩 10% */
+  --xiajie-background-5: rgba(0, 0, 0, 0.05);        /* 暗色遮罩 5% */
+  --xiajie-color-table-row-even: #f9f6f1;  /* 表格偶数行 */
+  --xiajie-color-table-row-odd: #f4f1ea;   /* 表格奇数行 */
+  --xiajie-color-table-border: #b88a4a;    /* 表格边框 */
+  --xiajie-border-dark: 1px solid #a67c52;         /* 主体深色边框，用于主要容器或标题分隔线 */
+  --xiajie-border-light: 1px solid #e6ded5;        /* 淡色边框，适合表格、输入框等轻量分隔 */
+  --xiajie-border-groove: 2px groove #e6ded5;      /* 雕刻感边框，呈现立体阴刻效果，用于装饰性框体 */
+  --xiajie-border-dotted: 1px dotted #bfa489;      /* 虚线边框，适合标注框或提示说明区域 */
+  --xiajie-border-gold: 1px solid #d6b370;         /* 金色描边，强调装饰边框，如头像、卡片等 */
+  /*======================= 角色属性面板（Statblock） =======================*/
+  --xiajie-statblock-background: rgba(243, 236, 223, 0.35);  /* 属性块背景 */
+  --xiajie-statblock-ability-border: #ffffff;               /* 属性格边框 */
+  --xiajie-statblock-ability-header-1st: #ede6d9;           /* 第一层头部背景 */
+  --xiajie-statblock-ability-header-2nd: #e2dfd5;           /* 第二层头部背景 */
+  --xiajie-statblock-ability-stat-1st: #e3d9ce;             /* 第一层属性背景 */
+  --xiajie-statblock-ability-stat-2nd: #d8d3cc;             /* 第二层属性背景 */
+  --xiajie-statblock-border: #9c856f;                       /* 属性边框线 */
+  --xiajie-statblock-column-width: 400px;                   /* 栏宽度 */
+  --xiajie-statblock-text-header: #5a2d20;                  /* 文字标题色 */
+  --xiajie-statblock-text-primary: #332f2f;                 /* 主文字色 */
+  --xiajie-statblock-text-secondary: rgba(80, 75, 70, 0.75);/* 次文字色 */
+   /*======================= 区块 UI =======================*/
+  --xiajie-block-width-base: 100px;                     /* 基础宽度 */
+  --xiajie-block-float-max: 50%;                        /* 最大浮动宽度 */
+  --xiajie-block-header-font: var(--font-chinese-serif); /* 区块标题字体 */
+  --xiajie-block-background: #f4f1ea;                   /* 区块背景 */
+  --xiajie-block-border-color: #b88a4a;                 /* 区块边框颜色 */
+  --xiajie-block-decor: no-repeat url("ui/notable-right-corner.svg") 0%/contain, no-repeat url("ui/notable-left-corner.svg") 100%/contain; /* 装饰角图案 */
+}
+/*====不知道什么用但DND5e里写了 未完工=======*/
+#context-menu [data-group-id]:has(li) {
+  position: relative;
+  margin-block-start: 0.5rem; 
+}
+#context-menu [data-group-id]:has(li)::before {
+  content: "";
+  position: absolute;
+  inset-inline: 1rem;
+  inset-block-start: -0.25rem;
+  border-block-start: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/*==========角色卡美化 未完工 =========*/
+/*背景材质*/
+.window-content {
+  background: var(--xiajie-sheet-background) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.window-content .custom-system-actor {
+  padding: 5px;
+  height: auto;
+  margin: 0;
+  font-size: var(--font-size-13);
+  color: var(--color-text-dark-primary);
+  background: transparent;
+  background: rgba(219, 219, 219, 0.196); /* 半透明白色磨砂 */
+  border-radius: 6px;
+}
+/*==================头像框 可修改==============*/
+
+.custom-system-actor .profile-img-container {
+  position: relative;
+  width: 128px;  /* 设置边框图大小 */
+  height: 128px;
+  background-image: var(--xiajie-sheet-biankuang-1);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0 auto; /* 可选：让头像在中间 */
+}
+.custom-system-actor .profile-img-container img.profile-img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border: none;
+}
+/*============按钮加边框 未完工===============*/
+
+
+
+/* ===========仅限角色卡窗口的滚动条美化 ===========*/
+.window-content {
+  scrollbar-color: #363636 #ededed;/* 滑块颜色 + 轨道颜色*/
+}
+
+/*===================侧边栏 完工======================*/
+
+/*Fix v11*/
+#interface {
+    overflow: clip;
+}
+/*end*/
+
+#sidebar::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: url(../../assets/ui/biankuang3.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#sidebar{
+  position: relative; /* 关键：让伪元素定位参照这个容器 */
+  background: transparent !important; /* 彻底去除背景 */
+  border: none; /* 如果你用 border-image，也可以留着 */
+  overflow: visible !important; /* 允许装饰背景溢出 */
+  z-index: 1; /* 确保内容层级正常 */
+}
+
+.collapse::before{
+    content: "";
+    overflow: visible !important;
+}
+
+#sidebar.collapsed {
+    width: 36px !important;
+    height: 370px !important;
+    border-image-source: url(../../assets/ui/biankuang3.webp);
+    border-image-slice: 30 fill;
+    background-position: center !important;
+    background-size: 100% 100%!important;
+    background-repeat: no-repeat;
+    padding: 1rem 0px 0px 0px;
+    display: list-item;
+    top: 1rem;
+}
+
+@supports (-moz-appearance:none) {
+    #sidebar.collapsed {
+        display: inline-table !important;
+        padding: 1.5rem 0px 0px 0px;
+    }
+}
+
+#sidebar-tabs{
+    text-align: center;
+}
+
+#sidebar #sidebar-tabs > .item {
+    margin: 0px 0px 5px 0;
+    line-height: 0px;
+}
+
+#sidebar.collapsed #sidebar-tabs > .item.active {
+    margin: 0px 0px 5px 0;
+}
+
+#sidebar #sidebar-tabs i.fa-comments {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-chat.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar-tabs {
+    height: 32px;
+}
+#sidebar-tabs > .item {
+    line-height: 0px;
+    flex: 0 0 var(--sidebar-tab-width);
+    height: 25px;
+    border-radius: 100%;
+}
+#sidebar-tabs > .item.active {
+    color: #FFF;
+    border: 1px solid red;
+    box-shadow: 0 0 6px inset #ff6400;
+}
+#sidebar #sidebar-tabs i.fa-comments::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-swords {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-combat.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-swords::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-map {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-scenes.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-map::before {
+    content: "";
+}
+/*侧边角色图标*/
+#sidebar #sidebar-tabs i.fa-user {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-actors.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+/*侧边角色图标 隐藏原本的*/
+#sidebar #sidebar-tabs i.fa-user::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-suitcase {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-items.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-suitcase::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-book-open {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-journal.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-book-open::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-th-list {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-tables.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-th-list::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-music {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-playlists.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-music::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-atlas {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-compendium.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-atlas::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-cogs {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-settings.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-cogs::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-cards {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-cards.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-cards::before {
+    content: "";
+}
+
+#sidebar #sidebar-tabs i.fa-code {
+    content: "";
+    background-image: url("../../assets/sidebar/sidebar-button-macros.png") !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+    background-position:center !important;
+    background-size:100% !important;
+    background-repeat: no-repeat;
+}
+
+#sidebar #sidebar-tabs i.fa-code::before {
+    content: "";
+}
+
+/*=====鼠标样式 未完工========*/
+
+
+/*=====左边栏背景 未完工=========*/
+
+
+/*======左下玩家显示 未完工========*/
+#players {
+    background-color: rgba(255, 255, 255, 0); /* 可选内容背景 */
+    border: 32px solid transparent; /* ⬅️ 设置足够的 border 区域以容纳边框 */
+    border-image-source: url(../../assets/other/players-border.webp);
+    border-image-slice: 32 fill; /* ⬅️ 将图像四周各切 32px，中间不显示 */
+    border-image-width: 32px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+}
+
+#players h3 .players-mode {
+    position: relative;
+    float: right;
+    top: 10px;
+    right: -12px;
+}
+
+#players h3 .players-mode::after {
+    position: absolute;
+    content: " ";
+    width: 34px;
+    height: 32px;
+    top: -7px;
+    z-index: -1;
+    opacity: 0.6;
+    left: -11px;
+}
+
+#players h3 {
+    position: relative;
+    color: #e9e0da;
+    border-bottom: none;
+    font-weight: 800;
+    text-shadow: 2px 0 0 var(--border-color),
+                -2px 0 0 var(--border-color),
+                0 2px 0 var(--border-color),
+                0 -2px 0 var(--border-color),
+                1px 1px var(--border-color),
+                -1px -1px 0 var(--border-color),
+                1px -1px 0 var(--border-color),
+                -1px 1px 0 var(--border-color);
+}
+
+#players h3::before {
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 130%;
+    top: -15%;
+    z-index: -1;
+    left: -10%;
+}
+
+#players ol {
+    position: relative;
+    font-weight: 400;
+}
+
+#players ol::before{
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 130%;
+    z-index: -1;
+    left: -10%;
+}
+
+#players ol li.player {
+    text-shadow: 2px 0 0 var(--border-color),
+    -2px 0 0 var(--border-color),
+    0 2px 0 var(--border-color),
+    0 -2px 0 var(--border-color),
+    1px 1px var(--border-color),
+    -1px -1px 0 var(--border-color),
+    1px -1px 0 var(--border-color),
+    -1px 1px 0 var(--border-color);
+}
+
+
+/*================== 左侧导航栏 未完工=========================*/
+
+#ui-top {
+    width: calc(100% - 340px);
+    }
+
+#navigation #nav-toggle {
+    background: none;
+    border: none;
+}
+
+#navigation .nav-item {
+    margin: 0 14px 8px 0;
+}
+
+#navigation #scene-list.vertical .scene.nav-item {
+    float: none;
+    width: fit-content;
+    display: table;
+}
+
+#navigation #scene-list .scene.nav-item {
+    float: left;
+    border: none;
+    background: none;
+    min-width: 80px;
+    text-align: center;
+}
+
+#nav-toggle {
+    width: 36px;
+    height: 36px;
+    color: var(--main-text-light-color);
+}
+
+#nav-toggle::after {
+    position: absolute;
+    content: " ";
+    width: 50px;
+    height: 50px;
+    left: -8px;
+    top: -9px;
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -2;
+    opacity: 0.88;
+}
+
+
+#navigation #scene-list .scene.nav-item {
+    position: relative;
+    color: var(--main-text-light-color);
+    font-weight: 600;
+}
+
+#navigation #scene-list .scene.nav-item::before {
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 130%;
+    top: -15%;
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: -10%;
+    opacity: 0.88;
+}
+#navigation #scene-list .scene.gm {
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    background-size: 100% 100%;
+    border: none;
+}
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
+    box-shadow: none;
+}
+
+
+
+
+  /*************************************************************/
+  /*=================== 场景控制 未完工 ========================*/
+  /*************************************************************/
+
+#controls ol .scene-control,
+#controls ol .control-tool {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: #837360;
+}
+
+#controls ol .scene-control.active,
+#controls ol .control-tool.active,
+#controls ol .scene-control:hover,
+#controls ol .control-tool:hover {
+    border: none;
+    box-shadow: none;
+}
+
+#controls ol .scene-control.active:before,
+#controls ol .control-tool.active:before,
+#controls ol .scene-control:hover:before,
+#controls ol .control-tool:hover:before {
+    background: url(../ui/buttons/controls_btn_accent.webp);
+    background-size: 100% 100%;
+    cursor: default;
+}
+
+#controls ol > li {
+    position: relative;
+}
+
+#controls ol > li.scene-control:before,
+#controls ol > li.control-tool:before
+{
+    position: absolute;
+    left: -9%;
+    top: -15%;
+
+    content: " ";
+    width: 130%;
+    height: 130%;
+
+    background: url(../ui/buttons/controls_btn.webp);
+    background-size: 100% 100%;
+    z-index: -2;
+    opacity: 0.88;
+    cursor: pointer !important; 
+    cursor: default !important;
+}
+
+/*************************************************************/
+/*========================= 快捷栏 ==========================*/
+/*************************************************************/
+
+#ui-bottom > div {
+    justify-content: left;
+}
+ 
+#hotbar {
+    font-family: CaslonPro;
+    font-weight: 500;
+    font-size: 14px;
+    width: 600px;
+    height: 59px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }    
+
+  #hotbar #action-bar {
+    flex: 1;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  #hotbar #action-bar #macro-list {
+    flex: 0 0 510px;
+    height: 100%;
+    list-style: none;
+    margin: 0 0px;
+    padding: 5px 0px 4px 0px;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    background: url(../ui/frames/hotkeybox-macro-list.webp);
+    box-shadow: 2px 2px 5px #000000;
+  }
+    #hotbar #action-bar .macro {
+      border-image: url(../ui/frames/hotkeybox.webp) 21 repeat;
+      border-image-slice: 6 6 6 6 fill;
+      border-image-width: 6px 6px 6px 6px;
+      border-image-outset: 0px 0px 0px 0px;
+      border-radius: 0px;
+    }   
+      #hotbar .macro .macro-key {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 3px 3px;
+        text-shadow: 1px 1px 1px black;
+        color: #f0f0e0;
+        font-weight: normal;
+        background: #000000e0;
+        max-height: 19px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 5px black;
+      }
+  #hotbar .bar-controls {
+    background: #000000de;
+    box-shadow: 0 0 4px black;
+    border-radius: 16px;
+    border: 2px solid #540e0ec2;
+  }
+    #hotbar .bar-controls span.page-number {
+      display: block;
+      font-size: 20px;
+      line-height: 8px;
+      position: relative;
+      top: 4px;
+    }
+
+ #fps {
+        position: absolute;
+        right: 300px;
+        order: 2;
+        border: 0px solid var(--color-border-light-tertiary);
+        border-radius: 5px;
+    }

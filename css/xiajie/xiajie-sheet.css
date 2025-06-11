@@ -1,0 +1,53 @@
+
+/* 通用样式：状态面板的外观 */
+.hp_mp_ {
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(58, 7, 7);
+}
+.custom-system-meter {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+/* 保留填充条，但去掉其默认背景，可以自定义 */
+.custom-system-meter .custom-system-meter-fill {
+  background: none !important; /* 取消默认背景颜色 */
+  opacity: 1;
+}
+
+/* 保留文字，但去掉文字阴影和多余样式 */
+.custom-system-meter .custom-system-meter-content {
+  color: #111 !important;
+  text-shadow: none !important;
+  font-weight: bold;
+}
+/*血量变化*/
+.hp_jiliangqi .custom-system-meter-fill {
+  background: linear-gradient(to right, #01b90b, #24ff5b) !important;
+}
+/* 用 meter 内容宽度模拟血量判断 */
+/*.hp_mp_ .hp_jiliangqi .custom-system-meter-fill[style*="width: 2"] {
+ background: linear-gradient(to right, #4c0000, #ff2222) !important;
+}*/
+/*内力变化*/
+.nei_li_jiliangqi .custom-system-meter-fill {
+  background: linear-gradient(to right, #1057a2, #94ece0) !important;
+}
+/*.nei_li_jiliangqi .custom-system-meter-fill[style*="width: 2"] {
+  background: linear-gradient(to right, #0f0019, #2c024b) !important;
+}
+
+/* 其他状态颜色扩展（可选） *//*
+.rage-panel {
+  background: linear-gradient(to right, #924f2b, #c97a4f);
+  border: 2px solid #663f1a;
+}*/
