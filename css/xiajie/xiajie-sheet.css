@@ -30,20 +30,38 @@
   text-shadow: none !important;
   font-weight: bold;
 }
+/*所有状态统一显示变色*/
+/*.custom-system-meter-fill.low-bar {
+  background: linear-gradient(to right, #4c0000, #ff2222) !important;
+   filter: brightness(1.1); /* 可选，用于显眼一点 */
+/*}*/
 /*血量变化*/
 .hp_jiliangqi .custom-system-meter-fill {
-  background: linear-gradient(to right, #01b90b, #24ff5b) !important;
+  background: linear-gradient(to right, #87fe8d, #2df35f) !important;
 }
-/* 用 meter 内容宽度模拟血量判断 */
-/*.hp_mp_ .hp_jiliangqi .custom-system-meter-fill[style*="width: 2"] {
- background: linear-gradient(to right, #4c0000, #ff2222) !important;
-}*/
+
 /*内力变化*/
 .nei_li_jiliangqi .custom-system-meter-fill {
-  background: linear-gradient(to right, #1057a2, #94ece0) !important;
+  background: linear-gradient(to right, #b9eeff, #94ece0) !important;
 }
-/*.nei_li_jiliangqi .custom-system-meter-fill[style*="width: 2"] {
-  background: linear-gradient(to right, #0f0019, #2c024b) !important;
+
+/*怒气*/
+.nu_qi_zhi_xianshi .custom-system-meter-fill {
+  background: linear-gradient(to right, #ff3c3c, #c60606) !important;
+}
+
+/*饱食度*/
+.bao_shi_du_xianshi .custom-system-meter-fill {
+  background: linear-gradient(to right, #e1aa03, #d66800) !important;
+}
+
+.hp_jiliangqi .custom-system-meter-fill.low-bar,
+.nei_li_jiliangqi .custom-system-meter-fill.low-bar,
+.bao_shi_du_xianshi .custom-system-meter-fill.low-bar {
+  background: linear-gradient(to right, #4c0000, #ff2222) !important;
+}
+.nu_qi_zhi_xianshi .custom-system-meter-fill.low-bar{
+  background: linear-gradient(to right, #ffe6e6, #ffe0e0) !important;
 }
 
 /* 其他状态颜色扩展（可选） *//*
@@ -51,3 +69,160 @@
   background: linear-gradient(to right, #924f2b, #c97a4f);
   border: 2px solid #663f1a;
 }*/
+
+/*=====修改休息表格======*/
+.xiuxi_biaoge ._xiaoqi_anjian button.custom-system-label-root {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a4a1a1cc;
+  border: 2px solid #0d3006e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 0;        /* 隐藏文字 */
+  margin: 0 3px;
+  transition: background 0.2s;
+}
+.xiuxi_biaoge ._xiaoqi_anjian button.custom-system-label-root i {
+  font-size: 14px;
+  color: white;
+  line-height: 1;            /* 消除行高导致的偏移 */
+  vertical-align: middle;    /* 图标基线居中对齐 */
+  transform: translateX(2px);
+}
+/*======休整=====*/
+.xiuxi_biaoge .xiuzheng_anjian button.custom-system-label-root {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a4a1a1cc;
+  border: 2px solid #0d3006e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 0;        /* 隐藏文字 */
+  margin: 0 3px;
+  transition: background 0.2s;
+}
+.xiuxi_biaoge .xiuzheng_anjian button.custom-system-label-root i {
+  font-size: 14px;
+  color: white;
+  line-height: 1;            /* 消除行高导致的偏移 */
+  vertical-align: middle;    /* 图标基线居中对齐 */
+  transform: translateX(2px);
+}
+/*========受伤=======*/
+.xiuxi_biaoge .shoushang_anjian button.custom-system-label-root {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a4a1a1cc;
+  border: 2px solid #340505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 0;        /* 隐藏文字 */
+  margin: 0 3px;
+  transition: background 0.2s;
+}
+.xiuxi_biaoge .shoushang_anjian button.custom-system-label-root i {
+  font-size: 14px;
+  color: white;
+  line-height: 1;            /* 消除行高导致的偏移 */
+  vertical-align: middle;    /* 图标基线居中对齐 */
+  transform: translateX(2px);
+}
+/*======修正调整========*/
+.xiuxi_biaoge .xiuzheng_tiaozheng button.custom-system-label-root {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a4a1a1;
+  border: 2px solid #3c0101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);   
+  margin: 0 3px;
+  transition: background 0.2s;
+}
+
+/*===========单独头像框 可修改==========*/
+
+/* 头像和头像框容器 */
+.app.sheet.actor .custom-system-actor .profile-img-container {
+  position: relative;                          /* 建立定位上下文 */
+  width: 300px;                               /* 正方形容器 */
+  height: 300px;
+  border-radius: 50%;                         /* 圆形效果 */
+
+  background-image: var(--xiajie-sheet-biankuang-1); /* 背景图（头像边框） */
+  background-repeat: no-repeat;
+  background-size: cover;                     /* 尽可能填满容器 */
+  background-position: center;
+
+  margin: 0 auto;                             /* 居中容器 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 头像图片本体 */
+.app.sheet.actor .custom-system-actor .profile-img-container img.profile-img {
+  position: absolute;
+  top: 1%;                                   /* 相对于容器上下内缩 */
+  left: 1%;                                  /* 相对于容器左右内缩 */
+  width: 95%;
+  height: 95%;
+  object-fit: cover;                          /* 保持头像比例并填充 */
+  border: none;                               /* 无边框 */
+  border-radius: 50%;                         /* 圆形头像 */
+  z-index: 0;                                 /* 确保显示在上方 */
+}
+
+
+/* 名字容器样式 */
+.sheet .custom-system-actor header.sheet-header h1 {
+  margin: 0;
+  padding: 0;
+  order: 0;
+  font-size: 20px;
+  text-align: left;
+  width: 180px;
+  display: flex;
+  height: 100%;                  /* 填满 header 区域 */
+  flex-direction: column;
+}
+
+/* 名字输入框样式 */
+.sheet .custom-system-actor header.sheet-header h1 input {
+  text-align: left;
+  font-size: 20px;
+  width: 100%;
+  padding: 4px 8px;
+  display: block;
+}
+
+.app.sheet.actor .custom-system-actor .profile-img-container header.sheet-header {
+  display: flex;
+  flex-direction: column;        /* 横向排列 */
+  justify-content: flex-start;
+  /*justify-content: center;*/
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+  position: relative;
+  height: 300px; 
+}
+
+.app.sheet.actor .custom-system-actor header.sheet-header h1 header.sheet-header {
+
+}
